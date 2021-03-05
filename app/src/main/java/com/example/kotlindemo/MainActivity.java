@@ -3,6 +3,7 @@ package com.example.kotlindemo;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,16 +17,29 @@ public class MainActivity extends AppCompatActivity {
     private List<News> arryList = new ArrayList<>();
     private MyListAdapter myListAdapter;
 
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setToolbar();
 
         getData();
 
         handleData();
 
 
+    }
+
+    /**
+     * toolabr的设置
+     */
+
+    public void setToolbar() {
+
+        toolbar = findViewById(R.id.tool_bar_show);
+        MainActivity.this.setSupportActionBar(toolbar);
     }
 
     /**
