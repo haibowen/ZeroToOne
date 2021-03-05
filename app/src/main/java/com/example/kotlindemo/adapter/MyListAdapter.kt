@@ -1,4 +1,4 @@
-package com.example.kotlindemo
+package com.example.kotlindemo.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,10 +7,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kotlindemo.R
 import com.example.kotlindemo.bean.News
 
 class MyListAdapter(var bean: List<News>, var context: Context) : RecyclerView.Adapter<MyListAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyListAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
 
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_list_show, parent, false))
@@ -24,7 +25,7 @@ class MyListAdapter(var bean: List<News>, var context: Context) : RecyclerView.A
 
     }
 
-    override fun onBindViewHolder(holder: MyListAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.imageShow.setImageResource(R.drawable.ic_launcher_foreground)
         holder.tvShow.text = bean[position].name
