@@ -28,7 +28,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
 
-
     private TabLayout tabLayout;
     private ViewPager viewPager2;
     private ViewPagerAdapter viewPagerAdapter;//适配器
@@ -44,13 +43,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         getTitles();
         getFragmentList();
         setViewPagerFragmentAdapter();
-
-
     }
 
 
@@ -59,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void getTitles() {
-
         titles.add("主页");
         titles.add("内容");
         titles.add("个人");
@@ -73,22 +67,20 @@ public class MainActivity extends AppCompatActivity {
         showFragments.add(homeFragment);
         showFragments.add(contentFragment);
         showFragments.add(userFragment);
-
-
     }
 
     /**
      * 设置 viewpager的适配器
      */
 
-    public void setViewPagerFragmentAdapter(){
+    public void setViewPagerFragmentAdapter() {
 
-        viewPagerAdapter=new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.setTitles(titles);
         viewPagerAdapter.setFragment(showFragments);
-        viewPager2=findViewById(R.id.vp_show);
+        viewPager2 = findViewById(R.id.vp_show);
         viewPager2.setAdapter(viewPagerAdapter);
-        tabLayout=findViewById(R.id.tab_layout);
+        tabLayout = findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager2);
 
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_baseline_home_24);
@@ -99,9 +91,6 @@ public class MainActivity extends AppCompatActivity {
 //        tabLayout.addTab(tabLayout.newTab().setCustomView(tab_icon("首页",R.drawable.home_selector)));
 //        tabLayout.addTab(tabLayout.newTab().setCustomView(tab_icon("内容",R.drawable.prices_selector)));
 //        tabLayout.addTab(tabLayout.newTab().setCustomView(tab_icon("个人",R.drawable.my_selector)));
-
-
-
 
 
     }
@@ -120,7 +109,4 @@ public class MainActivity extends AppCompatActivity {
 //        im.setImageResource(iconID);
 //        return newtab;
 //    }
-
-
-
 }

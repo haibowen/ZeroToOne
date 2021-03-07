@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlindemo.R
 import com.example.kotlindemo.bean.News
 
-class MyListAdapter(var bean: List<News>, var context: Context) : RecyclerView.Adapter<MyListAdapter.ViewHolder>() {
+class MyListAdapter(var bean: List<News>, var context: Context?) : RecyclerView.Adapter<MyListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
 
