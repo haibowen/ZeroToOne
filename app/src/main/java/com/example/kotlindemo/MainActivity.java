@@ -87,26 +87,5 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_baseline_local_fire_department_24);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_baseline_people_24);
 
-
-//        tabLayout.addTab(tabLayout.newTab().setCustomView(tab_icon("首页",R.drawable.home_selector)));
-//        tabLayout.addTab(tabLayout.newTab().setCustomView(tab_icon("内容",R.drawable.prices_selector)));
-//        tabLayout.addTab(tabLayout.newTab().setCustomView(tab_icon("个人",R.drawable.my_selector)));
-
-
     }
-
-    /**
-     * 设置底部切换栏
-     * @param name
-     * @param iconID
-     * @return
-     */
-//    private View tab_icon(String name, int iconID){
-//        View newtab =  LayoutInflater.from(this).inflate(R.layout.icon_view,null);
-//        TextView tv = (TextView) newtab.findViewById(R.id.tabtext);
-//        tv.setText(name);
-//        ImageView im = (ImageView)newtab.findViewById(R.id.tabicon);
-//        im.setImageResource(iconID);
-//        return newtab;
-//    }
 }
