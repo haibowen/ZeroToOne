@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="15dp"
+    android:layout_marginLeft="5dp"
     android:layout_marginTop="10dp"
-    android:layout_marginRight="15dp"
+    android:layout_marginRight="5dp"
     android:orientation="vertical"
     app:cardCornerRadius="5dp"
     app:cardElevation="4dp">
@@ -38,7 +38,7 @@
 
         <TextView
             android:layout_marginRight="6dp"
-            android:layout_marginLeft="6dp"
+            android:layout_marginLeft="10dp"
             android:id="@+id/tv_title"
             android:textStyle="bold"
             android:layout_width="match_parent"
@@ -59,7 +59,7 @@
             android:layout_marginBottom="20dp"
             android:ellipsize="end"
             android:maxLines="2"
-            android:layout_marginLeft="6dp"
+            android:layout_marginLeft="10dp"
             android:text="20小时"
             android:textSize="15sp" />
 

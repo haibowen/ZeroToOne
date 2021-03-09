@@ -32,6 +32,7 @@ class HomeFragment : Fragment() {
     private var myListAdapter: MyListAdapter? = null
     private var toolbar: Toolbar? = null
     private var mCollapsingToolbarLayout: CollapsingToolbarLayout? = null
+    var page:Int=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,7 +62,7 @@ class HomeFragment : Fragment() {
         //设置上拉刷新下拉加载
         setRefreshLayout(view)
         //获取数据
-        getData()
+        getData(page)
 
 
     }
@@ -79,10 +80,13 @@ class HomeFragment : Fragment() {
 
         //刷新的回调
         refreshLayout.setOnRefreshListener { refreshLayout ->
+            getData(page)
             refreshLayout.finishRefresh(2000 /*,false*/) //传入false表示刷新失败
         }
         //加载更多的回调
         refreshLayout.setOnLoadMoreListener { refreshLayout ->
+            page++
+            getData(page)
             refreshLayout.finishLoadMore(2000 /*,false*/) //传入false表示加载失败
         }
 
@@ -93,9 +97,9 @@ class HomeFragment : Fragment() {
     /**
      * mock 网络数据
      */
-    private fun getData() {
+    private fun getData( page:Int) {
 
-        NetWorkManager.request?.getAllArticle(2)?.enqueue(object : Callback<ResponseData<ArticalData>> {
+        NetWorkManager.request?.getAllArticle(page)?.enqueue(object : Callback<ResponseData<ArticalData>> {
             override fun onResponse(call: Call<ResponseData<ArticalData>>, response: retrofit2.Response<ResponseData<ArticalData>>) {
                 var bean: List<ArticalData.AuthorData>? = response.body()?.data?.datas
                 if (bean != null) {
