@@ -26,6 +26,8 @@
         app:tabIndicatorFullWidth="false"
         app:tabPaddingStart="0dp"
         app:tabPaddingEnd="0dp"
+        app:tabTextColor="@color/black"
+        app:tabSelectedTextColor="#ff282828"
         android:orientation="horizontal"
         />
 
