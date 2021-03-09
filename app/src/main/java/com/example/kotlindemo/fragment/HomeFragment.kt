@@ -1,6 +1,7 @@
 package com.example.kotlindemo.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,18 +12,23 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlindemo.R
 import com.example.kotlindemo.adapter.MyListAdapter
+import com.example.kotlindemo.bean.ArticalData
 import com.example.kotlindemo.bean.News
+import com.example.kotlindemo.net.NetWorkManager
+import com.example.kotlindemo.net.response.ResponseData
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.scwang.smart.refresh.footer.ClassicsFooter
 import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
+import retrofit2.Call
+import retrofit2.Callback
 import java.util.*
 
 
 class HomeFragment : Fragment() {
 
     private var recyclerView: RecyclerView? = null
-    private var arrayList: MutableList<News> = ArrayList()
+    private var arrayList: MutableList<ArticalData.AuthorData> = ArrayList()
     private var myListAdapter: MyListAdapter? = null
     private var toolbar: Toolbar? = null
     private var mCollapsingToolbarLayout: CollapsingToolbarLayout? = null
@@ -30,7 +36,6 @@ class HomeFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
-
     }
 
 
@@ -57,8 +62,7 @@ class HomeFragment : Fragment() {
         setRefreshLayout(view)
         //获取数据
         getData()
-        //处理数据
-        handleData()
+
 
     }
 
@@ -89,20 +93,31 @@ class HomeFragment : Fragment() {
     /**
      * mock 网络数据
      */
-    fun getData() {
-        for (i in 0..9) {
-            arrayList.add(News("测试", i))
-        }
+    private fun getData() {
+
+        NetWorkManager.request?.getAllArticle(2)?.enqueue(object : Callback<ResponseData<ArticalData>> {
+            override fun onResponse(call: Call<ResponseData<ArticalData>>, response: retrofit2.Response<ResponseData<ArticalData>>) {
+                var bean: List<ArticalData.AuthorData>? = response.body()?.data?.datas
+                if (bean != null) {
+                    handleData(bean)
+                    Log.e("onResponse", bean[0].author + "")
+                }
+            }
+
+            override fun onFailure(call: Call<ResponseData<ArticalData>>, t: Throwable) {
+                Log.e("onFailure", t.toString())
+            }
+        })
     }
 
     /**
-     * 处理数据
+     * 处理数据 展示数据
      */
-    fun handleData() {
+    private fun handleData( bean:List<ArticalData.AuthorData>) {
         recyclerView = view?.findViewById(R.id.rv_show_list)
         val linearLayoutManager = LinearLayoutManager(context)
         recyclerView?.layoutManager = linearLayoutManager
-        myListAdapter = MyListAdapter(arrayList, context)
+        myListAdapter = MyListAdapter(bean, context)
         recyclerView?.adapter = myListAdapter
     }
 

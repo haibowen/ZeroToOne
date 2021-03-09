@@ -1,12 +1,16 @@
 package com.example.kotlindemo.net.request
 
 import com.example.kotlindemo.bean.App
+import com.example.kotlindemo.bean.ArticalData
 import com.example.kotlindemo.net.response.ResponseData
 import io.reactivex.Observable
+import okhttp3.ResponseBody
 import retrofit2.Call
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 import retrofit2.http.Query
-import java.util.*
+
 
 /**
  * Created on 3/7/21
@@ -16,18 +20,21 @@ import java.util.*
  */
 interface Request {
 
-    companion object{
-        val  HOST="http://42.157.129.91/"
+    companion object {
+        val HOST = "https://www.wanandroid.com\n"
 
     }
 
     @POST("user/sorgs")
-    fun getSorgs(@Query("id")  id:String):Observable<ResponseData<App>>
+    fun getSorgs(@Query("id") id: String): Observable<ResponseData<App>>
 
 
     @POST("user/sorgs")
-    fun  getCallTest(@Query("id") id: String):Call<ResponseData<App>>
+    fun getCallTest(@Query("id") id: String): Call<ResponseData<App>>
 
+
+    @GET("article/list/{page}/json")
+    fun getAllArticle(@Path("page") page: Int): Call<ResponseData<ArticalData>>
 
 
 }

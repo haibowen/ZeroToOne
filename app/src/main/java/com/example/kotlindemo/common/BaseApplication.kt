@@ -1,6 +1,8 @@
 package com.example.kotlindemo.common
 
 import android.app.Application
+import com.example.kotlindemo.net.NetWorkManager
+import com.example.kotlindemo.net.request.Request
 import com.squareup.leakcanary.LeakCanary
 
 /**
@@ -13,6 +15,8 @@ class BaseApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        //初始化网络请求
+        NetWorkManager.instant.init(Request.HOST)
 
         //需要先判断手机上是否已经安装了 leakCanary
         if (LeakCanary.isInAnalyzerProcess(this)) {
