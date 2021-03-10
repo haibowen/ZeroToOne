@@ -5,13 +5,11 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlindemo.R
-import com.example.kotlindemo.activity.ArticialActivity
+import com.example.kotlindemo.activity.ArterialActivity
 import com.example.kotlindemo.bean.ArticalData
-import com.example.kotlindemo.bean.News
 
 class MyListAdapter(var bean: List<ArticalData.AuthorData>, var context: Context?) : RecyclerView.Adapter<MyListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -37,7 +35,7 @@ class MyListAdapter(var bean: List<ArticalData.AuthorData>, var context: Context
 
         holder.itemView.setOnClickListener {
 
-            var intent:Intent= Intent(context,ArticialActivity::class.java)
+            var intent:Intent= Intent(context,ArterialActivity::class.java)
             intent.putExtra("url",bean[position].link)
             context?.startActivity(intent)
         }

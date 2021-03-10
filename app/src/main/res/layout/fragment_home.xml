@@ -5,6 +5,7 @@
     android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -42,10 +43,25 @@
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/tool_bar_show"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="60dp"
                 android:minHeight="?attr/actionBarSize"
-                app:layout_collapseMode="pin" />
+                app:layout_collapseMode="pin" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_search_content"
+                    android:drawableLeft="@drawable/ic_baseline_search_24"
+                    android:layout_marginRight="10dp"
+                    android:text="搜索"
+                    android:layout_gravity="right"
+                    android:drawablePadding="5dp"
+                    />
+
+
+            </androidx.appcompat.widget.Toolbar>
 
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -59,7 +75,7 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <com.scwang.smart.refresh.header.ClassicsHeader
+        <com.scwang.smart.refresh.header.BezierRadarHeader
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

@@ -22,12 +22,12 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         app:tabIndicatorColor="#00000000"
-        android:background="#FBFBFB"
+        android:background="@color/white"
         app:tabIndicatorFullWidth="false"
         app:tabPaddingStart="0dp"
         app:tabPaddingEnd="0dp"
         app:tabTextColor="@color/black"
-        app:tabSelectedTextColor="#ff282828"
+        app:tabSelectedTextColor="@color/teal_200"
         android:orientation="horizontal"
         />
 

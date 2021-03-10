@@ -5,9 +5,10 @@ import android.os.Bundle
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlindemo.R
+import com.gyf.immersionbar.ktx.immersionBar
 import kotlinx.android.synthetic.main.activity_articial.*
 
-class ArticialActivity : AppCompatActivity() {
+class ArterialActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

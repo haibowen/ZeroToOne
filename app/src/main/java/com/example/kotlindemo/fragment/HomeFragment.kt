@@ -13,11 +13,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlindemo.R
 import com.example.kotlindemo.adapter.MyListAdapter
 import com.example.kotlindemo.bean.ArticalData
-import com.example.kotlindemo.bean.News
 import com.example.kotlindemo.net.NetWorkManager
 import com.example.kotlindemo.net.response.ResponseData
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.scwang.smart.refresh.footer.BallPulseFooter
 import com.scwang.smart.refresh.footer.ClassicsFooter
+import com.scwang.smart.refresh.header.BezierRadarHeader
 import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
 import retrofit2.Call
@@ -80,14 +81,15 @@ class HomeFragment : Fragment() {
 
         //刷新的回调
         refreshLayout.setOnRefreshListener { refreshLayout ->
+            arrayList.clear()
             getData(page)
-            refreshLayout.finishRefresh(2000 /*,false*/) //传入false表示刷新失败
+            refreshLayout.finishRefresh(200 /*,false*/) //传入false表示刷新失败
         }
         //加载更多的回调
         refreshLayout.setOnLoadMoreListener { refreshLayout ->
             page++
             getData(page)
-            refreshLayout.finishLoadMore(2000 /*,false*/) //传入false表示加载失败
+            refreshLayout.finishLoadMore(200 /*,false*/) //传入false表示加载失败
         }
 
 
@@ -103,6 +105,7 @@ class HomeFragment : Fragment() {
             override fun onResponse(call: Call<ResponseData<ArticalData>>, response: retrofit2.Response<ResponseData<ArticalData>>) {
                 var bean: List<ArticalData.AuthorData>? = response.body()?.data?.datas
                 if (bean != null) {
+                   arrayList= bean as MutableList<ArticalData.AuthorData>
                     handleData(bean)
                     Log.e("onResponse", bean[0].author + "")
                 }
@@ -122,7 +125,17 @@ class HomeFragment : Fragment() {
         val linearLayoutManager = LinearLayoutManager(context)
         recyclerView?.layoutManager = linearLayoutManager
         myListAdapter = MyListAdapter(bean, context)
+        myListAdapter?.notifyDataSetChanged()
         recyclerView?.adapter = myListAdapter
+    }
+
+    /**
+     * 搜索框的点击事件
+     */
+
+    private fun  clickSearch(){
+
+
     }
 
 }

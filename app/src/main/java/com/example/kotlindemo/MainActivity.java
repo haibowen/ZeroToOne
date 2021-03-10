@@ -1,22 +1,12 @@
 package com.example.kotlindemo;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.kotlindemo.adapter.MyListAdapter;
+import com.example.kotlindemo.activity.BaseActivity;
 import com.example.kotlindemo.adapter.ViewPagerAdapter;
-import com.example.kotlindemo.bean.News;
 import com.example.kotlindemo.fragment.ContentFragment;
 import com.example.kotlindemo.fragment.HomeFragment;
 import com.example.kotlindemo.fragment.UserFragment;
@@ -25,7 +15,7 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
 
     private TabLayout tabLayout;
@@ -88,14 +78,12 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_baseline_people_24);
 
     }
+
     /**
      * 切换的时候更换图标
-     *
-     *
-     *
      */
 
-    public void onSelectTab(){
+    public void onSelectTab() {
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
