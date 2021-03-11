@@ -14,8 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.BaseActivity"></activity>
-        <activity android:name=".activity.SplashActivity"
+        <activity android:name=".activity.SearchResultActivity"></activity>
+        <activity android:name=".activity.BaseActivity" />
+        <activity
+            android:name=".activity.SplashActivity"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +26,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.ArterialActivity" />
-        <activity android:name=".MainActivity"
-            android:launchMode="singleTask"/>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".test.TestActivity" /> <!-- 适配华为（huawei）刘海屏 -->
         <meta-data
             android:name="android.notch_support"

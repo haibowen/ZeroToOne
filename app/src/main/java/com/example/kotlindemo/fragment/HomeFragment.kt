@@ -1,16 +1,19 @@
 package com.example.kotlindemo.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlindemo.R
+import com.example.kotlindemo.activity.SearchResultActivity
 import com.example.kotlindemo.adapter.MyListAdapter
 import com.example.kotlindemo.bean.ArticalData
 import com.example.kotlindemo.net.NetWorkManager
@@ -64,6 +67,7 @@ class HomeFragment : Fragment() {
         setRefreshLayout(view)
         //获取数据
         getData(page)
+        startSearch()
 
 
     }
@@ -93,6 +97,17 @@ class HomeFragment : Fragment() {
         }
 
 
+    }
+    /**
+     * 搜索框的点击事件
+     */
+
+    private  fun   startSearch(){
+
+        var  text: TextView? =view?.findViewById(R.id.tv_search_content)
+        text?.setOnClickListener {
+            context?.startActivity(Intent(context,SearchResultActivity::class.java))
+        }
     }
 
 

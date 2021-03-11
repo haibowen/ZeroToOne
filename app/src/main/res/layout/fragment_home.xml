@@ -43,22 +43,29 @@
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/tool_bar_show"
-                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:layout_marginTop="20dp"
                 android:minHeight="?attr/actionBarSize"
-                app:layout_collapseMode="pin" >
+                app:layout_collapseMode="pin">
+
+                <!--                <SearchView-->
+                <!--                    android:id="@+id/searchView"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_marginEnd="16dp"-->
+                <!--                    android:layout_marginRight="16dp"-->
+                <!--                    android:iconifiedByDefault="false"-->
+                <!--                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>-->
 
                 <TextView
+                    android:id="@+id/tv_search_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/iv_search_content"
-                    android:drawableLeft="@drawable/ic_baseline_search_24"
-                    android:layout_marginRight="10dp"
-                    android:text="搜索"
                     android:layout_gravity="right"
-                    android:drawablePadding="5dp"
-                    />
+                    android:layout_marginRight="10dp"
+                    android:drawableLeft="@drawable/ic_baseline_search_24"
+                    android:drawablePadding="5dp" />
 
 
             </androidx.appcompat.widget.Toolbar>
