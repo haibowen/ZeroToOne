@@ -14,17 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.SearchResultActivity"></activity>
-        <activity android:name=".activity.BaseActivity" />
-        <activity
-            android:name=".activity.SplashActivity"
-            android:launchMode="singleTask">
+        <activity android:name=".activity.BehaviorActivity"></activity>
+        <activity android:name=".activity.FirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.SearchResultActivity" />
+        <activity android:name=".activity.BaseActivity" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:launchMode="singleTask"></activity>
         <activity android:name=".activity.ArterialActivity" />
         <activity
             android:name=".MainActivity"

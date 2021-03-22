@@ -10,6 +10,7 @@ import com.example.kotlindemo.adapter.ViewPagerAdapter;
 import com.example.kotlindemo.fragment.ContentFragment;
 import com.example.kotlindemo.fragment.HomeFragment;
 import com.example.kotlindemo.fragment.UserFragment;
+import com.example.kotlindemo.permission.PermissionUtils;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -36,6 +37,30 @@ public class MainActivity extends BaseActivity {
         getTitles();
         getFragmentList();
         setViewPagerFragmentAdapter();
+
+        PermissionUtils permissionUtils=new PermissionUtils(this);
+        permissionUtils.requestPermission(this,"", new PermissionUtils.PermissionRequestListener() {
+            @Override
+            public void onFirstRequestPermission() {
+
+            }
+
+            @Override
+            public void onPermissionPreviouslyDenied() {
+
+            }
+
+            @Override
+            public void onPermissionPreviouslyDeniedWithNeverAskAgain() {
+
+            }
+
+            @Override
+            public void onPermissionGranted() {
+
+            }
+        });
+
     }
 
 
