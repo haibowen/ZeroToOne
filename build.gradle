@@ -25,3 +25,8 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+task A(){
+    println("这是一个任务")
+
+}
