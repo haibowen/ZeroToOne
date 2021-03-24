@@ -4,11 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import com.example.kotlindemo.MainActivity
 import com.example.kotlindemo.R
 import com.example.kotlindemo.permission.PermissionUtils
 import com.example.kotlindemo.permission.PermissionUtils.PermissionRequestListener
 import com.example.kotlindemo.view.dialog.CustomerFragmentDialog
+import com.tencent.mmkv.MMKV
 import kotlinx.android.synthetic.main.activity_main2.*
 
 class FirstActivity : BaseActivity() {
@@ -43,6 +45,10 @@ class FirstActivity : BaseActivity() {
         bt_home_five.setOnClickListener {
             startActivity(Intent(this,ConsActivity::class.java))
         }
-
+        bt_home_six.setOnClickListener {
+            val  kv:MMKV= MMKV.defaultMMKV()!!
+            kv.encode("int",Integer.MIN_VALUE)
+            Toast.makeText(this,kv.decodeInt("int").toString(),Toast.LENGTH_SHORT).show()
+        }
     }
 }

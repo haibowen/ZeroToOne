@@ -77,6 +77,9 @@ dependencies {
     implementation 'androidx.paging:paging-runtime:3.0.0-beta01'
     //解决 65536问题
     implementation 'com.android.support:multidex:1.0.3'
+    //腾讯的轻量化存储 组件
+    implementation 'com.tencent:mmkv-static:1.2.7'
+
 
 
 
