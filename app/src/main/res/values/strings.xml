@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">学安卓</string>
+
+    <string name="content_request">
+        //第一次申请
+        void onFirstRequestPermission();
+        //用户拒绝权限申请，但是没有选中  不再提示的选项
+        void onPermissionPreviouslyDenied();
+        //用户拒绝权限申请，并选中不再提示 选项
+        void onPermissionPreviouslyDeniedWithNeverAskAgain();
+        //权限已获取
+        void onPermissionGranted();
+    </string>
 </resources>

@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.Paging3Activity"></activity>
+        <activity android:name=".activity.ConsActivity"></activity>
+        <activity android:name=".activity.Paging3Activity" />
         <activity android:name=".activity.BehaviorActivity" />
         <activity android:name=".activity.FirstActivity">
             <intent-filter>
