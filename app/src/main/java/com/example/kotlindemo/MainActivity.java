@@ -1,5 +1,6 @@
 package com.example.kotlindemo;
 
+import android.animation.Animator;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,6 +13,9 @@ import com.example.kotlindemo.fragment.HomeFragment;
 import com.example.kotlindemo.fragment.UserFragment;
 import com.example.kotlindemo.permission.PermissionUtils;
 import com.google.android.material.tabs.TabLayout;
+import com.willowtreeapps.spruce.Spruce;
+import com.willowtreeapps.spruce.animation.DefaultAnimations;
+import com.willowtreeapps.spruce.sort.DefaultSort;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,6 +64,7 @@ public class MainActivity extends BaseActivity {
 
             }
         });
+
 
     }
 

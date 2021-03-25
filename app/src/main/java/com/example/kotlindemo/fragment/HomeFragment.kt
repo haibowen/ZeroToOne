@@ -6,12 +6,14 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.cooltechworks.views.shimmer.ShimmerRecyclerView
 import com.example.kotlindemo.R
 import com.example.kotlindemo.activity.SearchResultActivity
 import com.example.kotlindemo.adapter.MyListAdapter
@@ -19,9 +21,7 @@ import com.example.kotlindemo.bean.ArticalData
 import com.example.kotlindemo.net.NetWorkManager
 import com.example.kotlindemo.net.response.ResponseData
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.scwang.smart.refresh.footer.BallPulseFooter
 import com.scwang.smart.refresh.footer.ClassicsFooter
-import com.scwang.smart.refresh.header.BezierRadarHeader
 import com.scwang.smart.refresh.header.ClassicsHeader
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
 import retrofit2.Call
@@ -35,12 +35,14 @@ class HomeFragment : Fragment() {
     private var arrayList: MutableList<ArticalData.AuthorData> = ArrayList()
     private var myListAdapter: MyListAdapter? = null
     private var toolbar: Toolbar? = null
+    private var imageview:ImageView?=null
     private var mCollapsingToolbarLayout: CollapsingToolbarLayout? = null
     var page:Int=0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+
     }
 
 
@@ -68,7 +70,9 @@ class HomeFragment : Fragment() {
         //获取数据
         getData(page)
         startSearch()
-
+        val shimmerRecycler: ShimmerRecyclerView = view.findViewById(R.id.rv_show_list) as ShimmerRecyclerView
+        shimmerRecycler.showShimmerAdapter()
+        imageview=view?.findViewById(R.id.iv_show)
 
     }
 

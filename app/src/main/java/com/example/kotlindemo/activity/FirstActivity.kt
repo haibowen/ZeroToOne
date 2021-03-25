@@ -9,6 +9,7 @@ import com.example.kotlindemo.MainActivity
 import com.example.kotlindemo.R
 import com.example.kotlindemo.permission.PermissionUtils
 import com.example.kotlindemo.permission.PermissionUtils.PermissionRequestListener
+import com.example.kotlindemo.service.MyService
 import com.example.kotlindemo.view.dialog.CustomerFragmentDialog
 import com.tencent.mmkv.MMKV
 import kotlinx.android.synthetic.main.activity_main2.*
@@ -50,5 +51,12 @@ class FirstActivity : BaseActivity() {
             kv.encode("int",Integer.MIN_VALUE)
             Toast.makeText(this,kv.decodeInt("int").toString(),Toast.LENGTH_SHORT).show()
         }
+
+        bt_home_seven.setOnClickListener {
+
+         val  intent= Intent(this,MyService::class.java)
+            startService(intent)
+        }
+
     }
 }

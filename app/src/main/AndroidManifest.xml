@@ -40,6 +40,10 @@
         <meta-data
             android:name="notch.config"
             android:value="portrait|landscape" />
+
+        <service android:name=".service.MyService"/>
+
+
     </application>
 
 </manifest>
