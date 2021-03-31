@@ -58,5 +58,9 @@ class FirstActivity : BaseActivity() {
             startService(intent)
         }
 
+        bt_home_eight.setOnClickListener {
+            startActivity(Intent(this,FloatActivity::class.java))
+        }
+
     }
 }

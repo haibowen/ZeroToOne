@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.ConsActivity"></activity>
+        <activity android:name=".activity.FloatActivity"></activity>
+        <activity android:name=".activity.ConsActivity" />
         <activity android:name=".activity.Paging3Activity" />
         <activity android:name=".activity.BehaviorActivity" />
         <activity android:name=".activity.FirstActivity">
@@ -41,9 +42,7 @@
             android:name="notch.config"
             android:value="portrait|landscape" />
 
-        <service android:name=".service.MyService"/>
-
-
+        <service android:name=".service.MyService" />
     </application>
 
 </manifest>
