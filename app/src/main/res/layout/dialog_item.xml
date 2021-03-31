@@ -22,5 +22,29 @@
         android:text="@string/content_request"
         tools:text="水月沐风"
         android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_show"
+        android:id="@+id/tv_show1"
+        android:text="@string/content_request1"
+        tools:text="水月沐风"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_show1"
+        android:id="@+id/tv_show2"
+        android:text="@string/content_request2"
+        tools:text="水月沐风"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_show2"
+        android:id="@+id/tv_show3"
+        android:text="@string/content_request3"
+        tools:text="水月沐风"
+        android:layout_marginTop="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

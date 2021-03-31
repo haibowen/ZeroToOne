@@ -9,6 +9,16 @@ buildscript {
         maven {
             url  "https://dl.bintray.com/bfears/maven"
         }
+
+        //flutter部分的aar依赖
+        maven {
+            url rootProject.file('flutter-repo/repo')
+        }
+        maven {
+            //  url 'https://mirrors.sjtug.sjtu.edu.cn/download.flutter.io'
+            // url 'https://mirrors.tuna.tsinghua.edu.cn/flutter/download.flutter.io'
+            url 'https://opentuna.cn/flutter/download.flutter.io/'
+        }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.2"
@@ -26,6 +36,15 @@ allprojects {
         maven { url "https://jitpack.io" }
         maven {
             url  "https://dl.bintray.com/bfears/maven"
+        }
+        //flutter部分的aar依赖
+        maven {
+            url rootProject.file('flutter-repo/repo')
+        }
+        maven {
+            //  url 'https://mirrors.sjtug.sjtu.edu.cn/download.flutter.io'
+            // url 'https://mirrors.tuna.tsinghua.edu.cn/flutter/download.flutter.io'
+            url 'https://opentuna.cn/flutter/download.flutter.io/'
         }
     }
 }

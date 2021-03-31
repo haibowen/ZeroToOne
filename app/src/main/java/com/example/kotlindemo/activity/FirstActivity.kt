@@ -11,7 +11,10 @@ import com.example.kotlindemo.permission.PermissionUtils
 import com.example.kotlindemo.permission.PermissionUtils.PermissionRequestListener
 import com.example.kotlindemo.service.MyService
 import com.example.kotlindemo.view.dialog.CustomerFragmentDialog
+import com.idlefish.flutterboost.FlutterBoost
+import com.idlefish.flutterboost.containers.FlutterBoostActivity
 import com.tencent.mmkv.MMKV
+import io.flutter.embedding.android.FlutterActivityLaunchConfigs
 import kotlinx.android.synthetic.main.activity_main2.*
 
 class FirstActivity : BaseActivity() {
@@ -61,6 +64,18 @@ class FirstActivity : BaseActivity() {
         bt_home_eight.setOnClickListener {
             startActivity(Intent(this,FloatActivity::class.java))
         }
+        bt_home_nine.setOnClickListener {
 
+          var hashMap= HashMap<String,String>()
+//            FlutterBoost.instance().open("second_page", hashMap as Map<String, Any>?);
+//
+            val intent = FlutterBoostActivity.CachedEngineIntentBuilder(FlutterBoostActivity::class.java, FlutterBoost.ENGINE_ID)
+                    .backgroundMode(FlutterActivityLaunchConfigs.BackgroundMode.opaque)
+                    .destroyEngineWithActivity(false)
+                    .url("second_page")
+                    .urlParams(hashMap as Map<String, Any>?)
+                    .build(this)
+            startActivity(intent)
+        }
     }
 }

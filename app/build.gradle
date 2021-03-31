@@ -84,12 +84,8 @@ dependencies {
     //android 动画库
     implementation 'com.willowtreeapps.spruce:spruce-android:1.1.0'
 
-
-
-
-
-
-
+    //flutter 模块依赖
+    implementation 'com.example.module_test:flutter_release:1.0'
 
 }
 repositories {

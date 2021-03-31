@@ -2,13 +2,24 @@
     <string name="app_name">学安卓</string>
 
     <string name="content_request">
-        //第一次申请
         void onFirstRequestPermission();
-        //用户拒绝权限申请，但是没有选中  不再提示的选项
+    </string>
+    <string name="content_request1">
         void onPermissionPreviouslyDenied();
-        //用户拒绝权限申请，并选中不再提示 选项
+    </string>
+    <string name="content_request2">
         void onPermissionPreviouslyDeniedWithNeverAskAgain();
-        //权限已获取
+    </string>
+    <string name="content_request3">
         void onPermissionGranted();
     </string>
+
+    <string name="open_native">open native page</string>
+    <string name="open_flutter">open flutter page</string>
+    <string name="open_flutter_fragment">open flutter fragment page</string>
+    <string name="open_custom_view_tab">open custom view page</string>
+    <string name="native_info">This is a native activity</string>
+    <string name="flutter1">Flutter1</string>
+    <string name="flutter2">Flutter2</string>
+    <string name="native_view">Native</string>
 </resources>
