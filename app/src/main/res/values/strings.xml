@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">海波的应用</string>
+    <string name="app_name">学安卓</string>
+
+    <string name="content_request">
+        void onFirstRequestPermission();
+    </string>
+    <string name="content_request1">
+        void onPermissionPreviouslyDenied();
+    </string>
+    <string name="content_request2">
+        void onPermissionPreviouslyDeniedWithNeverAskAgain();
+    </string>
+    <string name="content_request3">
+        void onPermissionGranted();
+    </string>
+
+    <string name="open_native">open native page</string>
+    <string name="open_flutter">open flutter page</string>
+    <string name="open_flutter_fragment">open flutter fragment page</string>
+    <string name="open_custom_view_tab">open custom view page</string>
+    <string name="native_info">This is a native activity</string>
+    <string name="flutter1">Flutter1</string>
+    <string name="flutter2">Flutter2</string>
+    <string name="native_view">Native</string>
 </resources>

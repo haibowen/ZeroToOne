@@ -1,16 +1,17 @@
 package com.example.kotlindemo.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlindemo.R
-import com.example.kotlindemo.bean.News
+import com.example.kotlindemo.activity.ArterialActivity
+import com.example.kotlindemo.bean.ArticalData
 
-class MyListAdapter(var bean: List<News>, var context: Context?) : RecyclerView.Adapter<MyListAdapter.ViewHolder>() {
+class MyListAdapter(var bean: List<ArticalData.AuthorData>, var context: Context?) : RecyclerView.Adapter<MyListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
 
@@ -27,8 +28,17 @@ class MyListAdapter(var bean: List<News>, var context: Context?) : RecyclerView.
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.imageShow.setImageResource(R.drawable.ic_launcher_foreground)
-        holder.tvShow.text = bean[position].name
+        holder.tvTime.text=bean[position].niceDate
+        holder.tvTitle.text=bean[position].title
+        holder.tvType.text="分类:"+bean[position].chapterName
+        holder.tvAuthor.text="作者:"+bean[position].author
+
+        holder.itemView.setOnClickListener {
+
+            var intent:Intent= Intent(context,ArterialActivity::class.java)
+            intent.putExtra("url",bean[position].link)
+            context?.startActivity(intent)
+        }
 
 
     }
@@ -36,8 +46,11 @@ class MyListAdapter(var bean: List<News>, var context: Context?) : RecyclerView.
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
 
-        var imageShow: ImageView = view.findViewById(R.id.iv_show)
-        var tvShow: TextView = view.findViewById(R.id.tv_show)
+        var tvAuthor: TextView = view.findViewById(R.id.tv_author)
+        var tvTitle:TextView=view.findViewById(R.id.tv_title)
+        var tvTime:TextView=view.findViewById(R.id.tv_time)
+        var tvType:TextView=view.findViewById(R.id.tv_type)
+
     }
 
 

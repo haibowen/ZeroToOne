@@ -1,2 +1,3 @@
+include ':kotlin-study'
 include ':app'
 rootProject.name = "KotlinDemo"

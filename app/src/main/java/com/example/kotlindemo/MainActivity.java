@@ -1,31 +1,27 @@
 package com.example.kotlindemo;
 
+import android.Manifest;
+import android.animation.Animator;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.kotlindemo.adapter.MyListAdapter;
+import com.example.kotlindemo.activity.BaseActivity;
 import com.example.kotlindemo.adapter.ViewPagerAdapter;
-import com.example.kotlindemo.bean.News;
 import com.example.kotlindemo.fragment.ContentFragment;
 import com.example.kotlindemo.fragment.HomeFragment;
 import com.example.kotlindemo.fragment.UserFragment;
+import com.example.kotlindemo.permission.PermissionUtils;
 import com.google.android.material.tabs.TabLayout;
+import com.willowtreeapps.spruce.Spruce;
+import com.willowtreeapps.spruce.animation.DefaultAnimations;
+import com.willowtreeapps.spruce.sort.DefaultSort;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
 
     private TabLayout tabLayout;
@@ -46,6 +42,31 @@ public class MainActivity extends AppCompatActivity {
         getTitles();
         getFragmentList();
         setViewPagerFragmentAdapter();
+
+        PermissionUtils permissionUtils=new PermissionUtils(this);
+        permissionUtils.requestPermission(this, Manifest.permission.SEND_SMS, new PermissionUtils.PermissionRequestListener() {
+            @Override
+            public void onFirstRequestPermission() {
+
+            }
+
+            @Override
+            public void onPermissionPreviouslyDenied() {
+
+            }
+
+            @Override
+            public void onPermissionPreviouslyDeniedWithNeverAskAgain() {
+
+            }
+
+            @Override
+            public void onPermissionGranted() {
+
+            }
+        });
+
+
     }
 
 
@@ -87,5 +108,29 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(1).setIcon(R.drawable.ic_baseline_local_fire_department_24);
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_baseline_people_24);
 
+    }
+
+    /**
+     * 切换的时候更换图标
+     */
+
+    public void onSelectTab() {
+
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
     }
 }

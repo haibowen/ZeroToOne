@@ -6,6 +6,7 @@ import android.os.PersistableBundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlindemo.R
+import com.example.kotlindemo.activity.BaseActivity
 import com.example.kotlindemo.bean.App
 import com.example.kotlindemo.net.NetWorkManager
 import com.example.kotlindemo.net.request.Request
@@ -30,7 +31,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  * Email: haibowen088@gmail.com
  * Description: show me the code change the world
  */
-class TestActivity : AppCompatActivity() {
+class TestActivity : BaseActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {

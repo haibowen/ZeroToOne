@@ -2,12 +2,11 @@ package com.example.kotlindemo.net
 
 import com.example.kotlindemo.BuildConfig
 import com.example.kotlindemo.net.request.Request
-import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import kotlin.math.log
 
 /**
  * Created on 3/7/21
@@ -53,7 +52,7 @@ class NetWorkManager {
         retrofit = Retrofit.Builder()
                 .client(client)
                 .baseUrl(baseUrl)
-                // .addCallAdapterFactory()
+                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 
