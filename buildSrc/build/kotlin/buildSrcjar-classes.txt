@@ -1,0 +1,1 @@
+/Users/hyplo/Mycode/AndroidProject/ZeroToOne/buildSrc/build/classes/kotlin/main/Dependencies$Deps.class:/Users/hyplo/Mycode/AndroidProject/ZeroToOne/buildSrc/build/classes/kotlin/main/Dependencies$Versions.class:/Users/hyplo/Mycode/AndroidProject/ZeroToOne/buildSrc/build/classes/kotlin/main/Dependencies.class
