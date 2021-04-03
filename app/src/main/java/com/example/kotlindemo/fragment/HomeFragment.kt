@@ -31,6 +31,7 @@ import java.util.*
 
 class HomeFragment : Fragment() {
 
+    private  val TAG = "HomeFragment"
     private var recyclerView: RecyclerView? = null
     private var arrayList: MutableList<ArticalData.AuthorData> = ArrayList()
     private var myListAdapter: MyListAdapter? = null
@@ -39,9 +40,12 @@ class HomeFragment : Fragment() {
     private var mCollapsingToolbarLayout: CollapsingToolbarLayout? = null
     var page:Int=0
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+        Log.e(TAG, "初始化$TAG")
+
 
     }
 

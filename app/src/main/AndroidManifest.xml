@@ -3,8 +3,7 @@
     package="com.example.kotlindemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".common.BaseApplication"
@@ -16,41 +15,38 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo"
         android:usesCleartextTraffic="true">
-
-
+        <activity android:name=".activity.ViewPager2Activity"></activity>
         <activity
             android:name="com.idlefish.flutterboost.containers.FlutterBoostActivity"
-            android:theme="@style/Theme.AppCompat"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
             android:hardwareAccelerated="true"
-            android:windowSoftInputMode="adjustResize" >
-            <meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable" android:resource="@drawable/launch_background"/>
-
+            android:theme="@style/Theme.AppCompat"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                android:resource="@drawable/launch_background" />
         </activity>
 
-        <meta-data android:name="flutterEmbedding"
-            android:value="2">
-        </meta-data>
-
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2"></meta-data>
 
         <activity
             android:name="io.flutter.embedding.android.FlutterActivity"
-            android:theme="@style/Theme.AppCompat"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
             android:hardwareAccelerated="true"
-            android:windowSoftInputMode="adjustResize" >
-            <meta-data android:name="io.flutter.embedding.android.SplashScreenDrawable" android:resource="@drawable/launch_background"/>
-
+            android:theme="@style/Theme.AppCompat"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+                android:resource="@drawable/launch_background" />
         </activity>
-
         <activity
             android:name=".activity.NativePageActivity"
-            android:theme="@style/Theme.AppCompat"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
-            android:windowSoftInputMode="adjustResize"/>
-
-
-        <activity android:name=".activity.FloatActivity"></activity>
+            android:theme="@style/Theme.AppCompat"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activity.FloatActivity" />
         <activity android:name=".activity.ConsActivity" />
         <activity android:name=".activity.Paging3Activity" />
         <activity android:name=".activity.BehaviorActivity" />

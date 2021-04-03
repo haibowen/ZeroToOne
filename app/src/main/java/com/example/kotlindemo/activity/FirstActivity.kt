@@ -69,7 +69,6 @@ class FirstActivity : BaseActivity() {
 
           var hashMap= HashMap<String,String>()
 //            FlutterBoost.instance().open("second_page", hashMap as Map<String, Any>?);
-//
             val intent = FlutterBoostActivity.CachedEngineIntentBuilder(FlutterBoostActivity::class.java, FlutterBoost.ENGINE_ID)
                     .backgroundMode(FlutterActivityLaunchConfigs.BackgroundMode.opaque)
                     .destroyEngineWithActivity(false)
@@ -77,7 +76,10 @@ class FirstActivity : BaseActivity() {
                     .urlParams(hashMap as Map<String, Any>?)
                     .build(this)
             startActivity(intent)
+        }
 
+        bt_home_ten.setOnClickListener {
+            startActivity(Intent(this,ViewPager2Activity::class.java))
 
         }
     }
