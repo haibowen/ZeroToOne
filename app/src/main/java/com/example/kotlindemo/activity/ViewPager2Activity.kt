@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_view_pager2.*
 class ViewPager2Activity : AppCompatActivity() {
 
 
+
     var list: MutableList<Fragment> = ArrayList<Fragment>()
     @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,8 +30,6 @@ class ViewPager2Activity : AppCompatActivity() {
         vp_show_2.let {
             it.adapter = ViewPager2Adapter(this, list)
         }
-
-
     }
 
     override fun onBackPressed() {
@@ -38,4 +37,5 @@ class ViewPager2Activity : AppCompatActivity() {
 
 
     }
+
 }

@@ -24,6 +24,11 @@ public class NativeRouter {
         put("sample://second_page", "flutterPage");
     }};
 
+    //代码块
+    {
+
+    }
+
     public static final String NATIVE_PAGE_URL = "sample://nativePage";
     public static final String FLUTTER_PAGE_URL = "sample://second_page";
     public static final String FLUTTER_FRAGMENT_PAGE_URL = "sample://flutterFragmentPage";
