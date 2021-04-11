@@ -2,6 +2,7 @@ package com.example.kotlindemo.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlindemo.R
@@ -14,6 +15,7 @@ class ArterialActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_articial)
 
+        var view: View
         var intent: Intent = getIntent()
         var url = intent.getStringExtra("url")
 
