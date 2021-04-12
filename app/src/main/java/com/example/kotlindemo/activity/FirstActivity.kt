@@ -11,6 +11,8 @@ import com.example.kotlindemo.R
 import com.example.kotlindemo.permission.PermissionUtils
 import com.example.kotlindemo.permission.PermissionUtils.PermissionRequestListener
 import com.example.kotlindemo.service.MyService
+import com.example.kotlindemo.view.dialog.AnotherDialog
+import com.example.kotlindemo.view.dialog.CustomerDialog
 import com.example.kotlindemo.view.dialog.CustomerFragmentDialog
 import com.idlefish.flutterboost.FlutterBoost
 import com.idlefish.flutterboost.containers.FlutterBoostActivity
@@ -36,38 +38,38 @@ class FirstActivity : BaseActivity() {
         })
 
         bt_home_third.setOnClickListener {
-            startActivity(Intent(this,Paging3Activity::class.java))
+            startActivity(Intent(this, Paging3Activity::class.java))
         }
         bt_home.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
         bt_home_four.setOnClickListener {
 
-         val customerFragmentDialog: CustomerFragmentDialog = CustomerFragmentDialog()
-            customerFragmentDialog.show(supportFragmentManager,"")
+            val customerFragmentDialog: CustomerFragmentDialog = CustomerFragmentDialog()
+            customerFragmentDialog.show(supportFragmentManager, "")
 
         }
         bt_home_five.setOnClickListener {
-            startActivity(Intent(this,ConsActivity::class.java))
+            startActivity(Intent(this, ConsActivity::class.java))
         }
         bt_home_six.setOnClickListener {
-            val  kv:MMKV= MMKV.defaultMMKV()!!
-            kv.encode("int",Integer.MIN_VALUE)
-            Toast.makeText(this,kv.decodeInt("int").toString(),Toast.LENGTH_SHORT).show()
+            val kv: MMKV = MMKV.defaultMMKV()!!
+            kv.encode("int", Integer.MIN_VALUE)
+            Toast.makeText(this, kv.decodeInt("int").toString(), Toast.LENGTH_SHORT).show()
         }
 
         bt_home_seven.setOnClickListener {
 
-         val  intent= Intent(this,MyService::class.java)
+            val intent = Intent(this, MyService::class.java)
             startService(intent)
         }
 
         bt_home_eight.setOnClickListener {
-            startActivity(Intent(this,FloatActivity::class.java))
+            startActivity(Intent(this, FloatActivity::class.java))
         }
         bt_home_nine.setOnClickListener {
 
-          var hashMap= HashMap<String,String>()
+            var hashMap = HashMap<String, String>()
 //            FlutterBoost.instance().open("second_page", hashMap as Map<String, Any>?);
             val intent = FlutterBoostActivity.CachedEngineIntentBuilder(FlutterBoostActivity::class.java, FlutterBoost.ENGINE_ID)
                     .backgroundMode(FlutterActivityLaunchConfigs.BackgroundMode.opaque)
@@ -79,7 +81,19 @@ class FirstActivity : BaseActivity() {
         }
 
         bt_home_ten.setOnClickListener {
-            startActivity(Intent(this,ViewPager2Activity::class.java))
+            startActivity(Intent(this, ViewPager2Activity::class.java))
+
+        }
+
+        bt_home_ele.setOnClickListener {
+
+            var dialog = CustomerDialog(this)
+            dialog.show()
+        }
+
+        bt_home_twl.setOnClickListener {
+            var dialog=AnotherDialog(this)
+            dialog.show()
 
         }
     }
