@@ -94,6 +94,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="viewpager2的使用" />
+            <Button
+                android:id="@+id/bt_home_ele"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="自定义Dialog" />
+
+            <Button
+                android:id="@+id/bt_home_twl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="自定义Dialog" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
