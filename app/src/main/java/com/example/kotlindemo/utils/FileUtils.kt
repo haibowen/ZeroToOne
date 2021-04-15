@@ -7,6 +7,14 @@ package com.example.kotlindemo.utils
 class FileUtils {
 
     /**
+     *初始化
+     */
+
+    init {
+
+    }
+
+    /**
      * 上传
      */
     fun upload(){
