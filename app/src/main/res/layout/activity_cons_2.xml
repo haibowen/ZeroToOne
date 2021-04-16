@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="把步骤一"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="步骤二这个特备尝试开始了 "
+        app:layout_constraintLeft_toLeftOf="@id/tv_one"
+        app:layout_constraintTop_toBottomOf="@id/tv_one" />
+
+    <TextView
+        android:id="@+id/tv_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="步骤三这个特 "
+        app:layout_constraintLeft_toLeftOf="@id/tv_two"
+        app:layout_constraintTop_toBottomOf="@id/tv_two" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="tv_one,tv_two" />
+
+    <TextView
+        android:id="@+id/tv_content_world"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/test"
+        app:layout_constraintLeft_toRightOf="@id/barrier7"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_show_place_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="占位符设置"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_content_world" />
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_show_place_holder"
+
+        />
+
+    <androidx.constraintlayout.widget.Placeholder
+        android:id="@+id/iv_place"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:content="@id/iv_left"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_left"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_show_flow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="flow的展示"
+        app:layout_constraintTop_toBottomOf="@id/iv_place" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cos_layout_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_show_flow">
+
+
+        <ImageView
+            android:id="@+id/iv_show_first_flow"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_show_second_flow"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toRightOf="@id/iv_show_first_flow"
+            app:layout_constraintTop_toTopOf="@id/iv_show_first_flow"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_show_third_flow"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toRightOf="@id/iv_show_second_flow"
+            app:layout_constraintTop_toTopOf="@id/iv_show_first_flow"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_show_fourth_flow"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toRightOf="@id/iv_show_third_flow"
+            app:layout_constraintTop_toTopOf="@id/iv_show_first_flow" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="iv_show_first_flow,iv_show_second_flow,iv_show_third_flow,iv_show_fourth_flow"
+            app:flow_verticalAlign="bottom"
+            app:flow_wrapMode="chain" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cos_layout_show_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cos_layout_show">
+
+
+        <ImageView
+            android:id="@+id/iv_show_first_flow_1"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_show_second_flow_2"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toRightOf="@id/iv_show_first_flow_1"
+            app:layout_constraintTop_toTopOf="@id/iv_show_first_flow_1"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_show_third_flow_3"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toRightOf="@id/iv_show_second_flow_2"
+            app:layout_constraintTop_toTopOf="@id/iv_show_first_flow_1"
+
+            />
+
+        <ImageView
+            android:id="@+id/iv_show_fourth_flow_4"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toRightOf="@id/iv_show_third_flow_3"
+            app:layout_constraintTop_toTopOf="@id/iv_show_first_flow_1" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="iv_show_first_flow_1,iv_show_second_flow_2,iv_show_third_flow_3,iv_show_fourth_flow_4"
+            app:flow_maxElementsWrap="4"
+            app:flow_verticalAlign="center"
+            app:flow_wrapMode="chain" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/tv_show_corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="圆角图片设置"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cos_layout_show_two" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

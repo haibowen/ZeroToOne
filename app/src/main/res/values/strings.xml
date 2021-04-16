@@ -22,4 +22,16 @@
     <string name="flutter1">Flutter1</string>
     <string name="flutter2">Flutter2</string>
     <string name="native_view">Native</string>
+
+
+    <string name="test">
+        输入：n = 10
+输出：4
+解释：你总共有 10 个橘子。
+第 1 天：吃 1 个橘子，剩余橘子数 10 - 1 = 9。
+第 2 天：吃 6 个橘子，剩余橘子数 9 - 2*(9/3) = 9 - 6 = 3。（9 可以被 3 整除）
+第 3 天：吃 2 个橘子，剩余橘子数 3 - 2*(3/3) = 3 - 2 = 1。
+第 4 天：吃掉最后 1 个橘子，剩余橘子数 1 - 1 = 0。
+你需要至少 4 天吃掉 10 个橘子。
+    </string>
 </resources>
