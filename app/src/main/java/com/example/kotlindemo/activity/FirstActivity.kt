@@ -96,5 +96,10 @@ class FirstActivity : BaseActivity() {
             dialog.show()
 
         }
+        bt_home_13.setOnClickListener {
+
+            startActivity(Intent(this,RecyclerViewActivity::class.java))
+
+        }
     }
 }
