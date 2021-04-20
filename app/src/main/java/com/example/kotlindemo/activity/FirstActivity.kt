@@ -101,6 +101,10 @@ class FirstActivity : BaseActivity() {
             startActivity(Intent(this,ListActivity::class.java))
         }
 
+        bt_home_14.setOnClickListener {
+            startActivity(Intent(this,ListMoreActivity::class.java))
+        }
+
 
     }
 }

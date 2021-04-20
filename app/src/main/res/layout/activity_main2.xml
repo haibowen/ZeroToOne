@@ -114,6 +114,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/bt_home_13"/>
+
+
+            <Button
+                android:text="列表显示另一个"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_home_14"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
