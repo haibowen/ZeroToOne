@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.ViewPager2Activity"></activity>
+        <activity android:name=".activity.ListActivity"></activity>
+        <activity android:name=".activity.ViewPager2Activity" />
         <activity
             android:name="com.idlefish.flutterboost.containers.FlutterBoostActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density"
@@ -29,7 +30,7 @@
 
         <meta-data
             android:name="flutterEmbedding"
-            android:value="2"></meta-data>
+            android:value="2" />
 
         <activity
             android:name="io.flutter.embedding.android.FlutterActivity"
