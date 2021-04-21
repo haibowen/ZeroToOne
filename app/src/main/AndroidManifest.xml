@@ -15,7 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo"
         android:usesCleartextTraffic="true">
+<<<<<<< HEAD
         <activity android:name=".activity.RecyclerViewActivity"></activity>
+=======
+        <activity android:name=".activity.ListMoreActivity"></activity>
+        <activity android:name=".activity.ListActivity" />
+>>>>>>> ab724b81fc2ad077c7b86d6e0aa18ca1d9846430
         <activity android:name=".activity.ViewPager2Activity" />
         <activity
             android:name="com.idlefish.flutterboost.containers.FlutterBoostActivity"

@@ -1,1 +1,3 @@
 /build
+
+buildSrc/build/libs/buildSrc.jar

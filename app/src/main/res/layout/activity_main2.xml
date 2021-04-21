@@ -109,11 +109,27 @@
                 android:text="自定义Dialog" />
 
             <Button
+<<<<<<< HEAD
                 android:id="@+id/bt_home_13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="recyclerview横滑" />
+=======
+                android:text="列表显示"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_home_13"/>
+
+
+            <Button
+                android:text="列表显示另一个"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_home_14"/>
+>>>>>>> ab724b81fc2ad077c7b86d6e0aa18ca1d9846430
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
