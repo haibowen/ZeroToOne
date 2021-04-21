@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.kotlindemo.R;
 import com.example.kotlindemo.adapter.MyTestAdapter;
+import com.example.kotlindemo.utils.CenterLayoutManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,14 +38,13 @@ public class ListActivity extends AppCompatActivity {
 
 
 
-        for (int i = 0; i <40 ; i++) {
+        for (int i = 0; i <=40 ; i++) {
             dataList.add("测试"+i);
 
         }
         myTestAdapter=new MyTestAdapter(this,dataList);
 
-        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(RecyclerView.HORIZONTAL);
+        CenterLayoutManager linearLayoutManager=new CenterLayoutManager(this,LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(myTestAdapter);
 
