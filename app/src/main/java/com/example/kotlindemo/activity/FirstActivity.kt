@@ -98,6 +98,11 @@ class FirstActivity : BaseActivity() {
         }
         bt_home_13.setOnClickListener {
 
+<<<<<<< HEAD
+            startActivity(Intent(this,RecyclerViewActivity::class.java))
+
+        }
+=======
             startActivity(Intent(this,ListActivity::class.java))
         }
 
@@ -106,5 +111,6 @@ class FirstActivity : BaseActivity() {
         }
 
 
+>>>>>>> ab724b81fc2ad077c7b86d6e0aa18ca1d9846430
     }
 }
