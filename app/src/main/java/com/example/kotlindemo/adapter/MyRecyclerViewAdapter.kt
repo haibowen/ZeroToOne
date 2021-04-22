@@ -8,30 +8,20 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlindemo.R
 
-
 class MyRecyclerViewAdapter(var context: Context, var dateList: List<String>) : RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyRecyclerViewAdapter.MyViewHolder {
-
         return MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_beauty_card_time, parent, false))
-
-
     }
 
     override fun getItemCount(): Int {
-
         return dateList.size
     }
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.MyViewHolder, position: Int) {
-
-        holder.text.text=dateList[position]
+        holder.text.text = dateList[position]
     }
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-        var text: TextView =view.findViewById(R.id.tv_show_time)
-
+        var text: TextView = view.findViewById(R.id.tv_show_time)
     }
-
-
 }

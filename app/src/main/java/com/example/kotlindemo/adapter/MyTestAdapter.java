@@ -23,9 +23,7 @@ import java.util.List;
 public class MyTestAdapter extends RecyclerView.Adapter<MyTestAdapter.MyViewHolder> {
 
     public Context mContext;
-
     private List<String> dataList;
-
     private int defaultItem;
 
     public MyTestAdapter(Context context, List<String> beans) {
@@ -35,13 +33,14 @@ public class MyTestAdapter extends RecyclerView.Adapter<MyTestAdapter.MyViewHold
 
     /**
      * 更新位置
+     *
      * @param
      * @param
      * @return
      */
 
-    public void setDefaultItem(int position){
-        this.defaultItem=position;
+    public void setDefaultItem(int position) {
+        this.defaultItem = position;
         notifyDataSetChanged();
 
     }
@@ -57,26 +56,21 @@ public class MyTestAdapter extends RecyclerView.Adapter<MyTestAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyTestAdapter.MyViewHolder holder, int position) {
-
         holder.textView.setText(dataList.get(position));
-
-        if (defaultItem!=-1){
-            if (defaultItem==position){
+        if (defaultItem != -1) {
+            if (defaultItem == position) {
                 holder.textView.setTextColor(Color.RED);
-            }else {
+            } else {
                 holder.textView.setTextColor(Color.BLACK);
             }
         }
-
-
     }
 
     /**
-     *
      * @return
      */
 
-    public List<String> getDataList(){
+    public List<String> getDataList() {
 
         return dataList;
     }
@@ -92,15 +86,12 @@ public class MyTestAdapter extends RecyclerView.Adapter<MyTestAdapter.MyViewHold
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-
             textView = itemView.findViewById(R.id.tv_show);
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (mClickBack!=null){
-
-                        mClickBack.clickListner(dataList.get(getLayoutPosition()),getLayoutPosition());
+                    if (mClickBack != null) {
+                        mClickBack.clickListener(dataList.get(getLayoutPosition()), getLayoutPosition());
                     }
 
                 }
@@ -111,12 +102,12 @@ public class MyTestAdapter extends RecyclerView.Adapter<MyTestAdapter.MyViewHold
 
     public interface ClickBack {
 
-        void clickListner(String name, int position);
+        void clickListener(String name, int position);
     }
 
     public ClickBack mClickBack;
 
-    public void setOnclikClick(ClickBack click) {
+    public void setOnclickListener(ClickBack click) {
         mClickBack = click;
 
     }

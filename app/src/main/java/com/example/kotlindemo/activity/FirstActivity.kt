@@ -21,14 +21,11 @@ import io.flutter.embedding.android.FlutterActivityLaunchConfigs
 import kotlinx.android.synthetic.main.activity_main2.*
 
 class FirstActivity : BaseActivity() {
-
     private val button: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         findViewById<View>(R.id.bt_show).setOnClickListener { startActivity(Intent(this@FirstActivity, BehaviorActivity::class.java)) }
-
-
         val permissionUtils = PermissionUtils(this)
         permissionUtils.requestPermission(this, Manifest.permission.CAMERA, object : PermissionRequestListener {
             override fun onFirstRequestPermission() {}
@@ -36,7 +33,6 @@ class FirstActivity : BaseActivity() {
             override fun onPermissionPreviouslyDeniedWithNeverAskAgain() {}
             override fun onPermissionGranted() {}
         })
-
         bt_home_third.setOnClickListener {
             startActivity(Intent(this, Paging3Activity::class.java))
         }
@@ -44,10 +40,8 @@ class FirstActivity : BaseActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
         bt_home_four.setOnClickListener {
-
             val customerFragmentDialog: CustomerFragmentDialog = CustomerFragmentDialog()
             customerFragmentDialog.show(supportFragmentManager, "")
-
         }
         bt_home_five.setOnClickListener {
             startActivity(Intent(this, ConsActivity::class.java))
@@ -57,18 +51,14 @@ class FirstActivity : BaseActivity() {
             kv.encode("int", Integer.MIN_VALUE)
             Toast.makeText(this, kv.decodeInt("int").toString(), Toast.LENGTH_SHORT).show()
         }
-
         bt_home_seven.setOnClickListener {
-
             val intent = Intent(this, MyService::class.java)
             startService(intent)
         }
-
         bt_home_eight.setOnClickListener {
             startActivity(Intent(this, FloatActivity::class.java))
         }
         bt_home_nine.setOnClickListener {
-
             var hashMap = HashMap<String, String>()
 //            FlutterBoost.instance().open("second_page", hashMap as Map<String, Any>?);
             val intent = FlutterBoostActivity.CachedEngineIntentBuilder(FlutterBoostActivity::class.java, FlutterBoost.ENGINE_ID)
@@ -79,34 +69,25 @@ class FirstActivity : BaseActivity() {
                     .build(this)
             startActivity(intent)
         }
-
         bt_home_ten.setOnClickListener {
             startActivity(Intent(this, ViewPager2Activity::class.java))
-
         }
-
         bt_home_ele.setOnClickListener {
-
             var dialog = CustomerDialog(this)
             dialog.show()
         }
-
         bt_home_twl.setOnClickListener {
-            var dialog=AnotherDialog(this)
+            var dialog = AnotherDialog(this)
             dialog.show()
-
         }
         bt_home_13.setOnClickListener {
-
-            startActivity(Intent(this,RecyclerViewActivity::class.java))
-
+            startActivity(Intent(this, RecyclerViewActivity::class.java))
         }
         bt_home_14.setOnClickListener {
-            startActivity(Intent(this,ListActivity::class.java))
+            startActivity(Intent(this, ListActivity::class.java))
         }
-
         bt_home_15.setOnClickListener {
-            startActivity(Intent(this,ListMoreActivity::class.java))
+            startActivity(Intent(this, ListMoreActivity::class.java))
         }
     }
 }
