@@ -15,20 +15,15 @@ import com.example.kotlindemo.R
  * Description: show me the code change the world
  */
 class MyNewAdapter(var context: Context, var list: MutableList<String>) : RecyclerView.Adapter<MyNewAdapter.MyViewHolder>() {
-
-
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-
-
-        holder.itemView.setOnClickListener{
-
+        holder.itemView.setOnClickListener {
         }
         TODO("Not yet implemented")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        var  view:View=LayoutInflater.from(context).inflate(R.layout.item_list_show, parent, false)
-        var  viewHolder:MyViewHolder=MyViewHolder(view)
+        var view: View = LayoutInflater.from(context).inflate(R.layout.item_list_show, parent, false)
+        var viewHolder: MyViewHolder = MyViewHolder(view)
         return viewHolder
     }
 
@@ -36,24 +31,10 @@ class MyNewAdapter(var context: Context, var list: MutableList<String>) : Recycl
         return list.size
     }
 
-    inner class MyViewHolder( view: View) : RecyclerView.ViewHolder(view) {
-
-
+    inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var text: TextView = view.findViewById(R.id.rv_show_list)
-
-        var tetsss=view.setOnClickListener{
+        var tetsss = view.setOnClickListener {
             layoutPosition
-
         }
-
-
-
-
-
-
-
-
     }
-
-
 }
