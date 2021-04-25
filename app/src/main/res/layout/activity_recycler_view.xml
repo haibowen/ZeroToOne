@@ -7,13 +7,35 @@
     tools:context=".activity.RecyclerViewActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_beauty_card_time"
         android:layout_marginTop="20dp"
+        android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rv_list"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cos_show"
+        android:background="@mipmap/ic_launcher"
+        app:layout_constraintRight_toRightOf="@id/rv_list"
+        app:layout_constraintBottom_toBottomOf="@id/rv_list"
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+
+        <TextView
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

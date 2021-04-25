@@ -1,6 +1,7 @@
 package com.example.kotlindemo.adapter
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,10 @@ class MyRecyclerViewAdapter(var context: Context, var dateList: List<String>) : 
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.MyViewHolder, position: Int) {
         holder.text.text = dateList[position]
+
+        holder.itemView.setOnClickListener {
+            Log.e("ada","列表点击了")
+        }
     }
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {

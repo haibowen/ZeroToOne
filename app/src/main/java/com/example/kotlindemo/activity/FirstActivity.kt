@@ -89,5 +89,8 @@ class FirstActivity : BaseActivity() {
         bt_home_15.setOnClickListener {
             startActivity(Intent(this, ListMoreActivity::class.java))
         }
+        bt_home_17.setOnClickListener {
+            startActivity(Intent(this,ViewActivity::class.java))
+        }
     }
 }

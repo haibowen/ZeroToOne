@@ -15,9 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.RecyclerViewActivity"></activity>
-
-        <activity android:name=".activity.ListMoreActivity"></activity>
+        <activity android:name=".activity.ViewActivity"></activity>
+        <activity android:name=".activity.RecyclerViewActivity" />
+        <activity android:name=".activity.ListMoreActivity" />
         <activity android:name=".activity.ListActivity" />
         <activity android:name=".activity.ViewPager2Activity" />
         <activity

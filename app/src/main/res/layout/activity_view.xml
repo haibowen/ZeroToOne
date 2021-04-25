@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ViewActivity">
+
+
+    <Button
+        android:id="@+id/bt_show_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="设置"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_click"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="测试"
+        app:layout_constraintBottom_toBottomOf="@id/bt_show_order"
+        app:layout_constraintRight_toRightOf="@id/bt_show_order" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="@id/bt_show_order"
+        app:layout_constraintRight_toRightOf="@id/bt_show_order" />
+
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="#517B7B"
+        android:gravity="center"
+        android:minHeight="50dp"
+        android:text="这是一段文字"
+        app:layout_constraintTop_toBottomOf="@id/bt_show_order" />
+
+    <ImageView
+        android:id="@+id/iv_show_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@id/tv_show"
+        app:layout_constraintRight_toRightOf="@id/tv_show" />
+
+    <ImageView
+        android:id="@+id/iv_screen_show"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_show" />
+</androidx.constraintlayout.widget.ConstraintLayout>
