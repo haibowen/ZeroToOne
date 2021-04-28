@@ -5,14 +5,13 @@
     android:background="@color/white"
     android:layout_height="match_parent">
 
-
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="fitXY"
-        android:text="这是测试的"
-        android:drawableLeft="@mipmap/ic_launcher"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv_list"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,13 +19,16 @@ import com.example.kotlindemo.R;
  * Description: show me the code change the world
  */
 public  abstract class BaseDialog extends Dialog {
+    private Context mContext;
     public BaseDialog(@NonNull Context context) {
         super(context, R.style.BaseDialog);
+        mContext=context;
         init();
     }
 
     public BaseDialog(@NonNull Context context, int themeResId) {
         super(context, themeResId);
+        mContext=context;
         init();
     }
 
