@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/cos_show"
     tools:context=".activity.RecyclerViewActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -16,13 +18,33 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/item_beauty_card_time" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:scaleType="fitXY"
+        android:id="@+id/iv_show"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@mipmap/ic_launcher"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/et_show"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_show"
+        />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="点击"
         android:id="@+id/bt_show"
-        app:layout_constraintLeft_toLeftOf="@id/rv_list"
-        app:layout_constraintTop_toBottomOf="@id/rv_list" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/rv_list" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
