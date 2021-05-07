@@ -7,6 +7,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -109,7 +110,49 @@ public class CustomerDialog extends BaseDialog {
     }
 
     @Override
+    public void show() {
+        super.show();
+        this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        this.getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+            @Override
+            public void onSystemUiVisibilityChange(int visibility) {
+                int uiOptions = View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+                        //布局位于状态栏下方
+                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                        //全屏
+                        View.SYSTEM_UI_FLAG_FULLSCREEN |
+                        //隐藏导航栏
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+                uiOptions |= 0x00001000;
+                getWindow().getDecorView().setSystemUiVisibility(uiOptions);
+            }
+        });
+    }
+
+    @Override
     protected int getLocation() {
         return Gravity.BOTTOM;
     }
+
+
+    /**
+     *
+     *
+     * rootView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+     *         @Override
+     *         public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+     *             if (oldBottom != 0 && bottom != 0 && (oldBottom - bottom > 0)) {
+     * 				//ToastUtils.showToast("键盘弹起");
+     *                ...
+     *             } else if (oldBottom != 0 && bottom != 0 && (bottom - oldBottom > 0)) {
+     * 				//ToastUtils.showToast("键盘收起");
+     *                 ...
+     *             }
+     *         }
+     *     });
+     * ————————————————
+     * 版权声明：本文为CSDN博主「怪大大」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+     * 原文链接：https://blog.csdn.net/qq_40733723/article/details/105773122
+     */
 }
