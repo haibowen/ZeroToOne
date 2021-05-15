@@ -93,5 +93,9 @@ class FirstActivity : BaseActivity() {
 
             startActivity(Intent(this,EditActivity::class.java))
         }
+
+        image_show.setOnClickListener {
+            startActivity(Intent(this,ImageActivity::class.java))
+        }
     }
 }

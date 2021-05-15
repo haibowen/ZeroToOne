@@ -16,13 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.EditActivity"
-            android:windowSoftInputMode="adjustResize"
-            >
-
-
-
-        </activity>
+        <activity android:name=".activity.ImageActivity"></activity>
+        <activity
+            android:name=".activity.EditActivity"
+            android:windowSoftInputMode="adjustResize"></activity>
         <activity android:name=".activity.RecyclerViewActivity" />
         <activity android:name=".activity.ListMoreActivity" />
         <activity android:name=".activity.ListActivity" />

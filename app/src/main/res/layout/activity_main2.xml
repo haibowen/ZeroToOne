@@ -143,6 +143,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/bt_home_17"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_show"
+                android:text="图片测试"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
