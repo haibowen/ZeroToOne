@@ -1,4 +1,4 @@
-package com.example.java_test.design;
+package com.example.java_test.design.strategy;
 
 public class MuteQuack implements QuackBehavior{
     @Override
