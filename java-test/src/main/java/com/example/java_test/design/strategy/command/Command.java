@@ -1,0 +1,10 @@
+package com.example.java_test.design.strategy.command;
+
+
+/**
+ * 命令接口
+ */
+public interface Command {
+
+    public void execute();
+}
