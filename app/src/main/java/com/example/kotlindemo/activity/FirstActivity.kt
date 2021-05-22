@@ -97,5 +97,9 @@ class FirstActivity : BaseActivity() {
         image_show.setOnClickListener {
             startActivity(Intent(this,ImageActivity::class.java))
         }
+
+        image_show.setOnClickListener(View.OnClickListener {
+
+        })
     }
 }
