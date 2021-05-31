@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import com.example.kotlin_study.DemoActivity
 import com.example.kotlindemo.MainActivity
 import com.example.kotlindemo.R
 import com.example.kotlindemo.permission.PermissionUtils
@@ -91,6 +92,11 @@ class FirstActivity : BaseActivity() {
         }
         bt_home_17.setOnClickListener {
             startActivity(Intent(this,ViewActivity::class.java))
+        }
+
+        bt_home_18.setOnClickListener {
+
+            startActivity(Intent(this, DemoActivity::class.java))
         }
     }
 }

@@ -3,7 +3,8 @@
     package="com.example.kotlin_study">
 
     <application>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".DemoActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
