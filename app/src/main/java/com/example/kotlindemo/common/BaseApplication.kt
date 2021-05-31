@@ -1,8 +1,7 @@
 package com.example.kotlindemo.common
 
-import android.app.Application
+import android.content.Context
 import android.content.Intent
-import com.example.kotlindemo.activity.BehaviorActivity
 import com.example.kotlindemo.activity.NativePageActivity
 import com.example.kotlindemo.net.NetWorkManager
 import com.example.kotlindemo.net.request.Request
@@ -22,8 +21,14 @@ import io.flutter.embedding.android.FlutterActivityLaunchConfigs
  */
 class BaseApplication : FlutterApplication() {
 
+    companion object{
+        lateinit var context: Context
+    }
+
     override fun onCreate() {
         super.onCreate()
+        //初始化
+        context=applicationContext
         //初始化网络请求
         NetWorkManager.instant.init(Request.HOST)
 
@@ -31,11 +36,7 @@ class BaseApplication : FlutterApplication() {
         if (LeakCanary.isInAnalyzerProcess(this)) {
             return;
         }
-
         LeakCanary.install(this)
-
-
-
         FlutterBoost.instance().setup(this, object : FlutterBoostDelegate {
             fun pushNativeRoute(pageName: String?, arguments: HashMap<String?, String?>?) {
                 val intent = Intent(FlutterBoost.instance().currentActivity(), NativePageActivity::class.java)
@@ -58,7 +59,5 @@ class BaseApplication : FlutterApplication() {
             override fun pushNativeRoute(p0: String?, p1: MutableMap<String, Any>?) {
             }
         }, { engine -> engine.getPlugins() })
-
-
     }
 }
