@@ -1,5 +1,6 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from /Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/src/main/AndroidManifest.xml:2:1-5:12
 INJECTED from /Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/src/main/AndroidManifest.xml:2:1-5:12
 INJECTED from /Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/src/main/AndroidManifest.xml:2:1-5:12
@@ -35,3 +36,40 @@ INJECTED from /Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/src/
 		INJECTED from /Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/src/main/AndroidManifest.xml
 		ADDED from /Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/src/main/AndroidManifest.xml
 		INJECTED from /Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/src/main/AndroidManifest.xml
+=======
+ADDED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:2:1-5:12
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:2:1-5:12
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:2:1-5:12
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:2:1-5:12
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:2:1-5:12
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:2:1-5:12
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:2:1-5:12
+	package
+		ADDED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:3:5-36
+		INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+		INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+		ADDED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:2:1-5:12
+		INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+		ADDED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:2:1-5:12
+		INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+		ADDED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+		INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+		ADDED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+		INJECTED from /Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+>>>>>>> d19e3a89b23c78c9585fb5e3921c5d912a5577ae

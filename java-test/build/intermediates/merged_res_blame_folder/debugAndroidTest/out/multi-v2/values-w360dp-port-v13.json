@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "/Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
                     "source": "/Users/edz/.gradle/caches/transforms-2/files-2.1/f74bff6b5eef88418e86369c363982ef/material-1.2.1/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+=======
+            "outputFile": "/Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "/Users/hyplo/.gradle/caches/transforms-2/files-2.1/f74bff6b5eef88418e86369c363982ef/material-1.2.1/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+>>>>>>> d19e3a89b23c78c9585fb5e3921c5d912a5577ae
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

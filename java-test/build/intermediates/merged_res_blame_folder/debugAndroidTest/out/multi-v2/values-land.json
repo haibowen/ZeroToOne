@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "/Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
                     "source": "/Users/edz/.gradle/caches/transforms-2/files-2.1/7dd6847aad0c52ddd73c6e19818e5e95/appcompat-1.2.0/res/values-land/values-land.xml",
+=======
+            "outputFile": "/Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-land/values-land.xml",
+            "map": [
+                {
+                    "source": "/Users/hyplo/.gradle/caches/transforms-2/files-2.1/7dd6847aad0c52ddd73c6e19818e5e95/appcompat-1.2.0/res/values-land/values-land.xml",
+>>>>>>> d19e3a89b23c78c9585fb5e3921c5d912a5577ae
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +21,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "/Users/edz/.gradle/caches/transforms-2/files-2.1/f74bff6b5eef88418e86369c363982ef/material-1.2.1/res/values-land/values-land.xml",
+=======
+                    "source": "/Users/hyplo/.gradle/caches/transforms-2/files-2.1/f74bff6b5eef88418e86369c363982ef/material-1.2.1/res/values-land/values-land.xml",
+>>>>>>> d19e3a89b23c78c9585fb5e3921c5d912a5577ae
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,24,30",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

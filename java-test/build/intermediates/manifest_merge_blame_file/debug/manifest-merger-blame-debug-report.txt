@@ -6,8 +6,14 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
+<<<<<<< HEAD
 8-->/Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
 9-->/Users/edz/AndroidStudioProjects/new/lsy/KotlinDemo/java-test/src/main/AndroidManifest.xml
+=======
+8-->/Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/Users/hyplo/Mycode/AndroidProject/ZeroToOne/java-test/src/main/AndroidManifest.xml
+>>>>>>> d19e3a89b23c78c9585fb5e3921c5d912a5577ae
 10
 11</manifest>

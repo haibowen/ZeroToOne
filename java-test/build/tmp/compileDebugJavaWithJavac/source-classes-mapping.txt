@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 com/example/java_test/design/strategy/Iterator/DinerMenu.java
  com.example.java_test.design.strategy.Iterator.DinerMenu
 com/example/java_test/design/strategy/decorator/Test.java
@@ -8,11 +9,27 @@ com/example/java_test/design/strategy/observer/WeatherData.java
  com.example.java_test.design.strategy.observer.WeatherData
 com/example/java_test/design/strategy/factory/CheesePizza.java
  com.example.java_test.design.strategy.factory.CheesePizza
+=======
+com/example/java_test/BuildConfig.java
+ com.example.java_test.BuildConfig
+com/example/java_test/structure/MyQueue.java
+ com.example.java_test.structure.MyQueue
+ com.example.java_test.structure.MyQueue$Node
+com/example/java_test/sort/QuickSort.java
+ com.example.java_test.sort.QuickSort
+com/example/java_test/structure/StackDemo.java
+ com.example.java_test.structure.StackDemo
+com/example/java_test/StackTest.java
+ com.example.java_test.StackTest
+com/example/java_test/QueueTest.java
+ com.example.java_test.QueueTest
+>>>>>>> d19e3a89b23c78c9585fb5e3921c5d912a5577ae
 com/example/java_test/structure/TreeNode.java
  com.example.java_test.structure.TreeNode
 com/example/java_test/MyLinkedList.java
  com.example.java_test.MyLinkedList
  com.example.java_test.MyLinkedList$Node
+<<<<<<< HEAD
 com/example/java_test/TreeNode.java
  com.example.java_test.TreeNode
 com/example/java_test/design/strategy/adapter/ReallyTurkey.java
@@ -122,3 +139,10 @@ com/example/java_test/design/strategy/command/LightOnCommand.java
  com.example.java_test.design.strategy.command.LightOnCommand
 com/example/java_test/design/strategy/decorator/HouseBlend.java
  com.example.java_test.design.strategy.decorator.HouseBlend
+=======
+com/example/java_test/Test.java
+ com.example.java_test.Test
+ com.example.java_test.Test$1
+com/example/java_test/TreeNode.java
+ com.example.java_test.TreeNode
+>>>>>>> d19e3a89b23c78c9585fb5e3921c5d912a5577ae
