@@ -33,12 +33,10 @@ class CameraXActivity : AppCompatActivity() {
 
 
     companion object {
-
         private const val TAG = "CameraX"
         private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
         private const val REQUEST_CODE_PERMISSIONS = 10
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
-
     }
 
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
@@ -57,7 +55,6 @@ class CameraXActivity : AppCompatActivity() {
             Log.e("test","点击了")
             takePhoto()
         }
-
         outputDirectory = getOutputDirectory()
         cameraExecutor = Executors.newSingleThreadExecutor()
     }
@@ -129,32 +126,24 @@ class CameraXActivity : AppCompatActivity() {
                 outputOptions,ContextCompat.getMainExecutor(this),object :ImageCapture.OnImageSavedCallback{
             override fun onError(exception: ImageCaptureException) {
                 Toast.makeText(this@CameraXActivity,exception.toString(),Toast.LENGTH_SHORT).show()
-
             }
 
             override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
-
                 val savedUri=Uri.fromFile(photoFile)
                 val msg="photo saved successed $savedUri"
                 Toast.makeText(this@CameraXActivity,msg,Toast.LENGTH_SHORT).show()
-
             }
         }
         )
-
-
-
     }
 
     override fun onDestroy() {
         super.onDestroy()
-
         cameraExecutor.shutdown()
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
         if(requestCode== REQUEST_CODE_PERMISSIONS){
             if (allPermissionsGranted()){
                 startCamera()
@@ -162,7 +151,6 @@ class CameraXActivity : AppCompatActivity() {
                 Toast.makeText(this,"没有授予权限",Toast.LENGTH_SHORT).show()
                 finish()
             }
-
         }
     }
 }

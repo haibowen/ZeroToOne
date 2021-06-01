@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f7f6f5"
+    android:orientation="vertical"
     tools:context=".activity.FirstActivity">
 
     <ImageView
@@ -14,150 +14,14 @@
         android:layout_height="200dp"
         android:scaleType="centerCrop"
         android:src="@mipmap/ic_launcher"
-        app:layout_constraintTop_toTopOf="parent">
-    </ImageView>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_show"
+        android:overScrollMode="never"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/iv_show">
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/bt_show"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="自定义behavier"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/bt_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="跳转到主页"
-                app:layout_constraintTop_toBottomOf="@id/bt_show" />
-
-            <Button
-                android:id="@+id/bt_home_third"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="paging3的使用"
-                app:layout_constraintTop_toBottomOf="@id/bt_show" />
-            <Button
-                android:id="@+id/bt_home_four"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="权限获取的使用" />
-            <Button
-                android:id="@+id/bt_home_five"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="页面适配使用约束布局" />
-            <Button
-                android:id="@+id/bt_home_six"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="轻量级存储mmkv" />
-            <Button
-                android:id="@+id/bt_home_seven"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="启动service" />
-
-            <Button
-                android:id="@+id/bt_home_eight"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="自定义view" />
-
-            <Button
-                android:id="@+id/bt_home_nine"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="跳转flutter页面" />
-            <Button
-                android:id="@+id/bt_home_ten"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="viewpager2的使用" />
-            <Button
-                android:id="@+id/bt_home_ele"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="自定义Dialog" />
-
-            <Button
-                android:id="@+id/bt_home_twl"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="自定义Dialog" />
-
-            <Button
-                android:id="@+id/bt_home_13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="recyclerview横滑" />
-
-
-            <Button
-                android:text="列表显示"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_home_14"/>
-
-
-            <Button
-                android:text="列表显示另一个"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_home_15"/>
-
-            <Button
-                android:text="gridLayout 加载不同的布局"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_home_16"/>
-            <Button
-                android:text="view 点击监听"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_home_17"/>
-
-            <Button
-                android:text="navigation jetpackDemo"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/bt_home_18"/>
-
-            <Button
-                android:text="cameraX"
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/camera_x"
-                />
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>
