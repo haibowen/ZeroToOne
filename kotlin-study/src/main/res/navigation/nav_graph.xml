@@ -6,7 +6,7 @@
     app:startDestination="@id/blankFragment">
     <fragment
         android:id="@+id/blankFragment"
-        android:name="com.example.kotlin_study.BlankFragment"
+        android:name="com.example.kotlin_study.navigation.BlankFragment"
         android:label="fragment_blank"
         tools:layout="@layout/fragment_blank" >
         <action
@@ -21,17 +21,17 @@
     </fragment>
     <fragment
         android:id="@+id/blankFragment2"
-        android:name="com.example.kotlin_study.BlankFragment2"
+        android:name="com.example.kotlin_study.navigation.BlankFragment2"
         android:label="fragment_blank2"
         tools:layout="@layout/fragment_blank2" />
     <fragment
         android:id="@+id/blankFragment3"
-        android:name="com.example.kotlin_study.BlankFragment3"
+        android:name="com.example.kotlin_study.navigation.BlankFragment3"
         android:label="fragment_blank3"
         tools:layout="@layout/fragment_blank3" />
     <fragment
         android:id="@+id/blankFragment4"
-        android:name="com.example.kotlin_study.BlankFragment4"
+        android:name="com.example.kotlin_study.navigation.BlankFragment4"
         android:label="fragment_blank4"
         tools:layout="@layout/fragment_blank4" >
         <action
@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/blankFragment5"
-        android:name="com.example.kotlin_study.BlankFragment5"
+        android:name="com.example.kotlin_study.navigation.BlankFragment5"
         android:label="fragment_blank5"
         tools:layout="@layout/fragment_blank5" />
 

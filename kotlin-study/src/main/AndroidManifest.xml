@@ -2,8 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kotlin_study">
 
+
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-permission android:name="android.permission.CAMERA"/>
     <application>
-        <activity android:name=".DemoActivity"></activity>
+        <activity android:name=".camerax.CameraXActivity"></activity>
+        <activity android:name=".navigation.DemoActivity" />
         <activity android:name=".MainActivity" />
     </application>
 

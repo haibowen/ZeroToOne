@@ -32,9 +32,7 @@ suspend fun three(int: Int): Int {
 
 fun  testAdd(){
     GlobalScope.launch {
-
         val time = measureTimeMillis {
-
             val sum = withContext(Dispatchers.IO) {
                 val one = async { one() }
                 val two = async { two() }
@@ -43,17 +41,14 @@ fun  testAdd(){
             println("计算的结果为$sum")
         }
         println("执行的时间为$time")
-
     }
     print("--------------")
     Thread.sleep(4000)
 }
 
 fun add() {
-
     GlobalScope.launch {
         val time = measureTimeMillis {
-
             val sum = withContext(Dispatchers.IO) {
                 val one = one()
                 val two = three(one)
@@ -62,9 +57,7 @@ fun add() {
             println("计算的结果为$sum")
         }
         println("执行的时间为$time")
-
     }
-
     print("--------------")
     Thread.sleep(4000)
 }

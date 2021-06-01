@@ -150,6 +150,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/bt_home_18"/>
+
+            <Button
+                android:text="cameraX"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/camera_x"
+                />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

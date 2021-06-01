@@ -6,7 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
-import com.example.kotlin_study.DemoActivity
+import com.example.kotlin_study.camerax.CameraXActivity
+import com.example.kotlin_study.navigation.DemoActivity
 import com.example.kotlindemo.MainActivity
 import com.example.kotlindemo.R
 import com.example.kotlindemo.permission.PermissionUtils
@@ -97,6 +98,11 @@ class FirstActivity : BaseActivity() {
         bt_home_18.setOnClickListener {
 
             startActivity(Intent(this, DemoActivity::class.java))
+        }
+
+        camera_x.setOnClickListener {
+
+            startActivity(Intent(this,CameraXActivity::class.java))
         }
     }
 }
