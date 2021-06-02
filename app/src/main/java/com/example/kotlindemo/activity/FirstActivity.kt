@@ -9,7 +9,6 @@ import com.example.kotlindemo.MainActivity
 import com.example.kotlindemo.R
 import com.example.kotlindemo.adapter.FirstPageAdapter
 import com.example.kotlindemo.bean.FirstPageBean
-import com.example.kotlindemo.service.MyService
 import kotlinx.android.synthetic.main.activity_main2.*
 
 class FirstActivity : BaseActivity() {
@@ -29,6 +28,7 @@ class FirstActivity : BaseActivity() {
             dataList?.add(FirstPageBean("cameraX",CameraXActivity::class.java))
             dataList?.add(FirstPageBean("截屏操作",ViewActivity::class.java))
             dataList?.add(FirstPageBean("约束布局",ConsActivity::class.java))
+            dataList?.add(FirstPageBean("自定义view",ClockActivity::class.java))
         /**
          *
          */

@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinDemo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.CoroutineScopeActivity"></activity>
+        <activity android:name=".activity.ClockActivity"></activity>
+        <activity android:name=".activity.CoroutineScopeActivity" />
         <activity android:name=".activity.ViewActivity" />
         <activity android:name=".activity.RecyclerViewActivity" />
         <activity android:name=".activity.ListMoreActivity" />
