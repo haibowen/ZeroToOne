@@ -7,10 +7,29 @@
     tools:context=".activity.ClockActivity">
 
     <com.example.kotlindemo.view.ClockView
+        android:id="@+id/clock_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <com.example.kotlindemo.view.PaintViewBasic
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/paint_show"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clock_view"
+        />
+
+    <com.example.kotlindemo.view.PaintFlashBasic
+        android:id="@+id/flash_line"
+        app:layout_constraintTop_toBottomOf="@id/paint_show"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
