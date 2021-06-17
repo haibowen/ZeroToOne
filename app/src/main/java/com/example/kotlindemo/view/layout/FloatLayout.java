@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FloatLayout extends ViewGroup {
+public class  FloatLayout extends ViewGroup {
 
     //存放容器中的所有view
     private List<List<View>> mAllView = new ArrayList<List<View>>();

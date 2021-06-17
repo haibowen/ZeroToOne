@@ -1,0 +1,16 @@
+package com.example.kotlin_study
+
+/**
+ * Created on 2021/6/12
+ * Author: hyplo
+ * Email: haibowen088@gmail.com
+ * Description: show me the code change the world
+ */
+
+
+/**
+ * 默认是  public final的
+ */
+open class Person {
+}
+

@@ -1,0 +1,4 @@
+com/example/gradle_test/BuildConfig.java
+ com.example.gradle_test.BuildConfig
+com/example/gradle_test/HelloGroovy.java
+ com.example.gradle_test.HelloGroovy

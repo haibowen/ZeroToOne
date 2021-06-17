@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/java-test" />
+            <option value="$PROJECT_DIR$/jetpack" />
             <option value="$PROJECT_DIR$/kotlin-study" />
           </set>
         </option>

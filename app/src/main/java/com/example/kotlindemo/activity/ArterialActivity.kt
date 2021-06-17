@@ -4,9 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebViewClient
-import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlindemo.R
-import com.gyf.immersionbar.ktx.immersionBar
 import kotlinx.android.synthetic.main.activity_articial.*
 
 class ArterialActivity : BaseActivity() {

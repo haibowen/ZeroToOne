@@ -1,0 +1,2 @@
+com/example/gradle_test/test/BuildConfig.java
+ com.example.gradle_test.test.BuildConfig
