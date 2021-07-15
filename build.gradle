@@ -72,3 +72,7 @@ task A(){
     println("这是一个任务")
 
 }
+
+DefaultTask
+
+

@@ -33,6 +33,10 @@ public class ListActivity extends AppCompatActivity {
         for (int i = 0; i <= 40; i++) {
             dataList.add("测试" + i);
         }
+
+
+
+
         myTestAdapter = new MyTestAdapter(this, dataList);
         CenterLayoutManager linearLayoutManager = new CenterLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);

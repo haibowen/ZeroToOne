@@ -2,3 +2,35 @@ include ':gradle-test'
 include ':kotlin-study'
 include ':app'
 rootProject.name = "KotlinDemo"
+include ':annotation'
+include ':factory-compiler'
+
+
+this.gradle.settingsEvaluated {
+    //初始化
+    println("这是settingsEvaluated")
+}
+this.gradle.projectsLoaded {
+    println("这是 projectsLoaded")
+}
+
+this.gradle.beforeProject {
+    println("这是beforeProject")
+}
+this.gradle.afterProject {
+    println("这是 afterProject")
+}
+
+this.gradle.projectsEvaluated {
+    println("这是projectsEvaluated")
+}
+this.gradle.buildFinished {
+    println("这是buildFinished")
+}
+this.gradle.buildStarted {
+    println("这是buildStarted")
+}
+
+
+
+

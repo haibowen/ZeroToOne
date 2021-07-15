@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat.canScrollVertically
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlindemo.R
 import com.gyf.immersionbar.ktx.immersionBar
 import kotlinx.android.synthetic.main.activity_articial.*
@@ -21,5 +24,9 @@ class ArterialActivity : BaseActivity() {
 
         wb_show_something.loadUrl(url.toString())
         wb_show_something.webViewClient = WebViewClient()
+
+
+
+
     }
 }

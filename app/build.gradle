@@ -92,6 +92,10 @@ dependencies {
     //依赖其他模块
     implementation project(':kotlin-study')
 
+    //apt 模块依赖
+    implementation project(':annotation')
+    annotationProcessor  project(':factory-compiler')
+
     //cameraX的使用
     def camerax_version = "1.0.0"
 // CameraX core library using camera2 implementation

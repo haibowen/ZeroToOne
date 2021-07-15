@@ -1,13 +1,14 @@
 package com.example.kotlindemo.activity
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlin_study.camerax.CameraXActivity
 import com.example.kotlin_study.navigation.DemoActivity
 import com.example.kotlindemo.MainActivity
 import com.example.kotlindemo.R
 import com.example.kotlindemo.adapter.FirstPageAdapter
+import com.example.kotlindemo.bean.App
 import com.example.kotlindemo.bean.FirstPageBean
 import kotlinx.android.synthetic.main.activity_main2.*
 
@@ -17,6 +18,28 @@ class FirstActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
+
+
+        val linearLayoutManager: LinearLayoutManager =
+            object : LinearLayoutManager(getActivity(), VERTICAL, false) {
+                override fun canScrollVertically(): Boolean {
+                    return false
+                }
+            }
+
+        Thread(){
+           println("这是一个测试")
+        }
+
+        val app = App("test","hyplo").let { test->
+
+            test.name="flutter"
+        }
+        println(app.also {
+
+        })
+
+
         /**
          * 初始化 数据
          */
