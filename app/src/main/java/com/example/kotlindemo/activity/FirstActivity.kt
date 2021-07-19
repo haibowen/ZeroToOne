@@ -1,5 +1,6 @@
 package com.example.kotlindemo.activity
 
+import android.app.PendingIntent.getActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,7 +22,7 @@ class FirstActivity : BaseActivity() {
 
 
         val linearLayoutManager: LinearLayoutManager =
-            object : LinearLayoutManager(getActivity(), VERTICAL, false) {
+            object : LinearLayoutManager(this, VERTICAL, false) {
                 override fun canScrollVertically(): Boolean {
                     return false
                 }
