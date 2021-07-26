@@ -1,0 +1,8 @@
+com/example/annotation/IShape.java
+ com.example.annotation.IShape
+com/example/annotation/Rectangle.java
+ com.example.annotation.Rectangle
+com/example/annotation/Factory.java
+ com.example.annotation.Factory
+com/example/annotation/MyClass.java
+ com.example.annotation.MyClass

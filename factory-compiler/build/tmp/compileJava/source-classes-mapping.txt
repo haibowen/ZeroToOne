@@ -1,0 +1,4 @@
+com/example/factory_compiler/FactoryAnnotatedClass.java
+ com.example.factory_compiler.FactoryAnnotatedClass
+com/example/factory_compiler/MyClass.java
+ com.example.factory_compiler.MyClass
