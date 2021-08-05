@@ -46,6 +46,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation files('libs/classes-dex2jar.jar')
+    implementation files('libs/qclasses-dex2jar.jar')
     testImplementation 'junit:junit:4.+'
     testCompile "org.jetbrains.kotlin:kotlin-stdlib:1.1.0"
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
