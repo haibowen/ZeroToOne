@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/hyplo/Mycode/AndroidProject/ZeroToOne/jetpack/build/intermediates/res/merged/release/layout-v26/mtrl_calendar_month.xml",
+        "source": "/Users/hyplo/.gradle/caches/transforms-2/files-2.1/5557afa0df21161a1f2e5dc44f1e1472/material-1.2.1/res/layout-v26/mtrl_calendar_month.xml"
+    },
+    {
+        "merged": "/Users/hyplo/Mycode/AndroidProject/ZeroToOne/jetpack/build/intermediates/res/merged/release/layout-v26/abc_screen_toolbar.xml",
+        "source": "/Users/hyplo/.gradle/caches/transforms-2/files-2.1/40d7701d1e8b0fe3242c848fc893c148/appcompat-1.2.0/res/layout-v26/abc_screen_toolbar.xml"
+    }
+]

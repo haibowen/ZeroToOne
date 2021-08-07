@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/hyplo/Mycode/AndroidProject/ZeroToOne/jetpack/build/intermediates/res/merged/release/drawable-v23/abc_control_background_material.xml",
+        "source": "/Users/hyplo/.gradle/caches/transforms-2/files-2.1/40d7701d1e8b0fe3242c848fc893c148/appcompat-1.2.0/res/drawable-v23/abc_control_background_material.xml"
+    },
+    {
+        "merged": "/Users/hyplo/Mycode/AndroidProject/ZeroToOne/jetpack/build/intermediates/res/merged/release/drawable-v23/mtrl_popupmenu_background_dark.xml",
+        "source": "/Users/hyplo/.gradle/caches/transforms-2/files-2.1/5557afa0df21161a1f2e5dc44f1e1472/material-1.2.1/res/drawable-v23/mtrl_popupmenu_background_dark.xml"
+    }
+]

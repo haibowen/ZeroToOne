@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/hyplo/Mycode/AndroidProject/ZeroToOne/jetpack/build/intermediates/res/merged/release/layout-watch-v20/abc_alert_dialog_title_material.xml",
+        "source": "/Users/hyplo/.gradle/caches/transforms-2/files-2.1/40d7701d1e8b0fe3242c848fc893c148/appcompat-1.2.0/res/layout-watch-v20/abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "/Users/hyplo/Mycode/AndroidProject/ZeroToOne/jetpack/build/intermediates/res/merged/release/layout-watch-v20/abc_alert_dialog_button_bar_material.xml",
+        "source": "/Users/hyplo/.gradle/caches/transforms-2/files-2.1/40d7701d1e8b0fe3242c848fc893c148/appcompat-1.2.0/res/layout-watch-v20/abc_alert_dialog_button_bar_material.xml"
+    }
+]
