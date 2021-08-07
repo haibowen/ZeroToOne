@@ -68,6 +68,7 @@ class FirstActivity : BaseActivity() {
                     .urlParams(hashMap as Map<String, Any>?)
                     .build(this)
             startActivity(intent)
+
         }
         bt_home_ten.setOnClickListener {
             startActivity(Intent(this, ViewPager2Activity::class.java))
@@ -90,7 +91,6 @@ class FirstActivity : BaseActivity() {
             startActivity(Intent(this, ListMoreActivity::class.java))
         }
         bt_home_17.setOnClickListener {
-
             startActivity(Intent(this,EditActivity::class.java))
         }
     }
